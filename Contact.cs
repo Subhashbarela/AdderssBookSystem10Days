@@ -9,32 +9,22 @@ namespace AddressBookSystem
     internal class Contact
     {
 
-         String fullname;
-        String address;
-       String state;
-         String zip;
-         String phone;
+          public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string country { get; set; }
+        public string phoneNumber { get; set; }
+        public string email { get; set; }
 
-        public Contact(String fullname, String address,  String state, String zip, String phone)
+
+        public Contact(string firstName, string lastName, string country, string phoneNumber, string email)
         {
-            this.fullname = fullname;
-            this.address = address;
-            
-            this.state = state;
-            this.zip = zip;
-            this.phone = phone;
-
-
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.country = country;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
         }
-        public  void dipslay()
-        {
-            Console.WriteLine("name is :" + fullname);
-            Console.WriteLine("Address is :" + address);
-            Console.WriteLine("state is :" + state);
-            Console.WriteLine("zip code  is :" + zip);
-            Console.WriteLine("phone number is :" + phone);
-
-        }
+       
     }
 }
 
