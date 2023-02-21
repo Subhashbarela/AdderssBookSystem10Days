@@ -11,7 +11,7 @@ namespace AddressBookSystem
        public static void Main(string[] args)
         {
            AddressBookInfo myAddrBk = new AddressBookInfo();
-            Contact newContact = new Contact("Prince", "Praveen", "INDIA", "8369319177", "prince.p@example.com");
+            Contact newContact = new Contact("Barela", "Subhash", "INDIA", "7697335257", "barelasubhash16@gmail.com");
 
             myAddrBk.AddContact(newContact);
             myAddrBk.PrintContacts();
