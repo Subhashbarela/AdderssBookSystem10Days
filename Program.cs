@@ -8,9 +8,14 @@ namespace AddressBookSystem
 {
     internal class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to to address book Systems");
+            Contact Info = new Contact("abc","pune","mh","425107","474535535");
+            Info.dipslay();
         }
+        
+
+        
     }
+    
 }
