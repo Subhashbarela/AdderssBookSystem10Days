@@ -10,8 +10,11 @@ namespace AddressBookSystem
     {
        public static void Main(string[] args)
         {
-            Contact Info = new Contact("abc","pune","mh","425107","474535535");
-            Info.dipslay();
+           AddressBookInfo myAddrBk = new AddressBookInfo();
+            Contact newContact = new Contact("Prince", "Praveen", "INDIA", "8369319177", "prince.p@example.com");
+
+            myAddrBk.AddContact(newContact);
+            myAddrBk.PrintContacts();
         }
         
 
