@@ -52,5 +52,22 @@ namespace AddressBookSystem
                 }
             }
         }
+        public void DeleteContact(string firstName, string lastName)
+        {
+            for (int i = 0; i < NumberOfContacts; i++)
+            {
+                if (ContactInfo[i].firstName == firstName && ContactInfo[i].lastName == lastName)
+                {
+
+                    for (int j = i; j < NumberOfContacts - 1; j++)
+                    {
+                        ContactInfo[j] = ContactInfo[j + 1];
+                    }
+                    ContactInfo[NumberOfContacts - 1] = null;
+                    NumberOfContacts--;
+                    return;
+                }
+            }
+        }
     }
 }
