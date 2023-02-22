@@ -35,6 +35,8 @@ namespace AddressBookSystem
                     ContactInfo[i].country,
                     ContactInfo[i].phoneNumber,
                     ContactInfo[i].email);
+
+                Console.WriteLine("**********************************************************");
             }
         }
 
