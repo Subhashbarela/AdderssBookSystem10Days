@@ -14,13 +14,13 @@ namespace AddressBookSystem
 
         public AddressBookInfo()
         {
-            ContactInfo = new Contact[80];
+            ContactInfo = new Contact[100];
             NumberOfContacts = 0;
         }
 
-        public void AddContact(Contact contact)
+        public void AddContact(Contact add)
         {
-            ContactInfo[NumberOfContacts] = contact;
+            ContactInfo[NumberOfContacts] = add;
             NumberOfContacts++;
         }
 
@@ -30,7 +30,26 @@ namespace AddressBookSystem
             for (int i = 0; i < NumberOfContacts; i++)
             {
                 Console.WriteLine("Name: {0} {1}\nCountry: {2}\nPhone: {3}\nEmail: {4}\n",
-                    ContactInfo[i].firstName, ContactInfo[i].lastName, ContactInfo[i].country, ContactInfo[i].phoneNumber, ContactInfo[i].email);
+                    ContactInfo[i].firstName,
+                    ContactInfo[i].lastName,
+                    ContactInfo[i].country,
+                    ContactInfo[i].phoneNumber,
+                    ContactInfo[i].email);
+            }
+        }
+
+        public void EditContacts(string firstName, string lastName, string newFirstName, string newLastName, string country, string phoneNumber, string email)
+        {
+            for (int i = 0; i < NumberOfContacts; i++)
+            {
+                if (ContactInfo[i].firstName == firstName && ContactInfo[i].lastName == lastName)
+                {
+                    ContactInfo[i].firstName = newFirstName;
+                    ContactInfo[i].lastName = newLastName;
+                    ContactInfo[i].country = country;
+                    ContactInfo[i].phoneNumber = phoneNumber;
+                    ContactInfo[i].email = email;
+                }
             }
         }
     }

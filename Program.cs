@@ -12,24 +12,11 @@ namespace AddressBookSystem
        public static void Main(string[] args)
         {
             AddressBookInfo myAddressBook = new AddressBookInfo();
+            Contact newContact = new Contact("shiva", "barela", "INDIA", "9678534657", "shivabarela027@Gmail.com");
+            myAddressBook.AddContact(newContact);
+            myAddressBook.PrintContacts();
 
-
-            Console.WriteLine("Add new contact:");
-            Console.Write("Enter first name: ");
-            string firstName = Console.ReadLine();
-            Console.Write("Enter last name: ");
-            string lastName = Console.ReadLine();
-            Console.Write("Enter country: ");
-            string country = Console.ReadLine();
-            Console.Write("Enter phone number: ");
-            string phoneNumber = Console.ReadLine();
-            Console.Write("Enter email: ");
-            string email = Console.ReadLine();
-
-            Contact newCont = new Contact(firstName, lastName, country, phoneNumber, email);
-
-            myAddressBook.AddContact(newCont);
-            Console.WriteLine("Contact Details: ");
+            myAddressBook.EditContacts("shiva", "barela","rajesh","bhadle", "INDIA", "9678534657", "vinubarela96@Gmail.com");
             myAddressBook.PrintContacts();
 
 
